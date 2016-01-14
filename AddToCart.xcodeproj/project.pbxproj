@@ -15,6 +15,8 @@
 		1499CFB21C4623CA00037EC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1499CFB01C4623CA00037EC2 /* LaunchScreen.storyboard */; };
 		1499CFBD1C4623CA00037EC2 /* AddToCartTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1499CFBC1C4623CA00037EC2 /* AddToCartTests.m */; };
 		1499CFC81C4623CA00037EC2 /* AddToCartUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1499CFC71C4623CA00037EC2 /* AddToCartUITests.m */; };
+		1499CFD71C4626B800037EC2 /* ProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1499CFD61C4626B800037EC2 /* ProductCell.m */; settings = {ASSET_TAGS = (); }; };
+		1499CFDA1C4626FE00037EC2 /* ProductData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1499CFD91C4626FE00037EC2 /* ProductData.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		1499CFC31C4623CA00037EC2 /* AddToCartUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AddToCartUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1499CFC71C4623CA00037EC2 /* AddToCartUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddToCartUITests.m; sourceTree = "<group>"; };
 		1499CFC91C4623CA00037EC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1499CFD51C4626B800037EC2 /* ProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCell.h; sourceTree = "<group>"; };
+		1499CFD61C4626B800037EC2 /* ProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCell.m; sourceTree = "<group>"; };
+		1499CFD81C4626FE00037EC2 /* ProductData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductData.h; sourceTree = "<group>"; };
+		1499CFD91C4626FE00037EC2 /* ProductData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,10 @@
 				1499CFB01C4623CA00037EC2 /* LaunchScreen.storyboard */,
 				1499CFB31C4623CA00037EC2 /* Info.plist */,
 				1499CFA21C4623CA00037EC2 /* Supporting Files */,
+				1499CFD51C4626B800037EC2 /* ProductCell.h */,
+				1499CFD61C4626B800037EC2 /* ProductCell.m */,
+				1499CFD81C4626FE00037EC2 /* ProductData.h */,
+				1499CFD91C4626FE00037EC2 /* ProductData.m */,
 			);
 			path = AddToCart;
 			sourceTree = "<group>";
@@ -271,7 +281,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1499CFAA1C4623CA00037EC2 /* ViewController.m in Sources */,
+				1499CFD71C4626B800037EC2 /* ProductCell.m in Sources */,
 				1499CFA71C4623CA00037EC2 /* AppDelegate.m in Sources */,
+				1499CFDA1C4626FE00037EC2 /* ProductData.m in Sources */,
 				1499CFA41C4623CA00037EC2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,7 +375,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -400,7 +412,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

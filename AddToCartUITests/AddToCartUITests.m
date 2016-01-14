@@ -2,7 +2,7 @@
 //  AddToCartUITests.m
 //  AddToCartUITests
 //
-//  Created by 冯莉娅 on 16/1/13.
+//  Created by fly on 16/1/13.
 //  Copyright © 2016年 fly. All rights reserved.
 //
 
