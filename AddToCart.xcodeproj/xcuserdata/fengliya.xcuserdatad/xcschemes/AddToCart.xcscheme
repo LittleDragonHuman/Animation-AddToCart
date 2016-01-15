@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1499CFB71C4623CA00037EC2"
-               BuildableName = "AddToCartTests.xctest"
+               BuildableName = "AddToCart.xctest"
                BlueprintName = "AddToCartTests"
                ReferencedContainer = "container:AddToCart.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1499CFC21C4623CA00037EC2"
-               BuildableName = "AddToCartUITests.xctest"
+               BuildableName = "AddToCart.xctest"
                BlueprintName = "AddToCartUITests"
                ReferencedContainer = "container:AddToCart.xcodeproj">
             </BuildableReference>

@@ -47,10 +47,10 @@
 		1499CFAE1C4623CA00037EC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1499CFB11C4623CA00037EC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1499CFB31C4623CA00037EC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1499CFB81C4623CA00037EC2 /* AddToCartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AddToCartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1499CFB81C4623CA00037EC2 /* AddToCart.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AddToCart.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1499CFBC1C4623CA00037EC2 /* AddToCartTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddToCartTests.m; sourceTree = "<group>"; };
 		1499CFBE1C4623CA00037EC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1499CFC31C4623CA00037EC2 /* AddToCartUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AddToCartUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1499CFC31C4623CA00037EC2 /* AddToCart.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AddToCart.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1499CFC71C4623CA00037EC2 /* AddToCartUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddToCartUITests.m; sourceTree = "<group>"; };
 		1499CFC91C4623CA00037EC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1499CFD51C4626B800037EC2 /* ProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCell.h; sourceTree = "<group>"; };
@@ -98,8 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				1499CF9F1C4623CA00037EC2 /* AddToCart.app */,
-				1499CFB81C4623CA00037EC2 /* AddToCartTests.xctest */,
-				1499CFC31C4623CA00037EC2 /* AddToCartUITests.xctest */,
+				1499CFB81C4623CA00037EC2 /* AddToCart.xctest */,
+				1499CFC31C4623CA00037EC2 /* AddToCart.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -185,7 +185,7 @@
 			);
 			name = AddToCartTests;
 			productName = AddToCartTests;
-			productReference = 1499CFB81C4623CA00037EC2 /* AddToCartTests.xctest */;
+			productReference = 1499CFB81C4623CA00037EC2 /* AddToCart.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		1499CFC21C4623CA00037EC2 /* AddToCartUITests */ = {
@@ -203,7 +203,7 @@
 			);
 			name = AddToCartUITests;
 			productName = AddToCartUITests;
-			productReference = 1499CFC31C4623CA00037EC2 /* AddToCartUITests.xctest */;
+			productReference = 1499CFC31C4623CA00037EC2 /* AddToCart.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -426,7 +426,7 @@
 				INFOPLIST_FILE = AddToCart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fly.AddToCart;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AddToCart;
 			};
 			name = Debug;
 		};
@@ -437,7 +437,7 @@
 				INFOPLIST_FILE = AddToCart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fly.AddToCart;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AddToCart;
 			};
 			name = Release;
 		};
@@ -448,7 +448,7 @@
 				INFOPLIST_FILE = AddToCartTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fly.AddToCartTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AddToCart;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AddToCart.app/AddToCart";
 			};
 			name = Debug;
@@ -460,7 +460,7 @@
 				INFOPLIST_FILE = AddToCartTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fly.AddToCartTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AddToCart;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AddToCart.app/AddToCart";
 			};
 			name = Release;
@@ -471,7 +471,7 @@
 				INFOPLIST_FILE = AddToCartUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fly.AddToCartUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AddToCart;
 				TEST_TARGET_NAME = AddToCart;
 				USES_XCTRUNNER = YES;
 			};
@@ -483,7 +483,7 @@
 				INFOPLIST_FILE = AddToCartUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fly.AddToCartUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AddToCart;
 				TEST_TARGET_NAME = AddToCart;
 				USES_XCTRUNNER = YES;
 			};
@@ -508,6 +508,7 @@
 				1499CFCE1C4623CA00037EC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1499CFCF1C4623CA00037EC2 /* Build configuration list for PBXNativeTarget "AddToCartTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +517,7 @@
 				1499CFD11C4623CA00037EC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1499CFD21C4623CA00037EC2 /* Build configuration list for PBXNativeTarget "AddToCartUITests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +526,7 @@
 				1499CFD41C4623CA00037EC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

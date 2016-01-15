@@ -19,7 +19,7 @@
     for (NSInteger i = 0; i < 20; i++) {
         Product *product = [Product new];
         product.productName = [NSString stringWithFormat:@"商品%@",@(i)];
-        product.productPrice = i + 20;
+        product.productPrice = i;
         [array addObject:product];
     }
     return [NSArray arrayWithArray:array];
