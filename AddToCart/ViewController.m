@@ -123,22 +123,22 @@ static CGFloat bottomViewHeight = 60.0f;
     CGPoint endPoint = [self.view convertPoint:self.bottomView.numLabel.center fromView:self.bottomView];
     
     //贝塞尔曲线
-    CAKeyframeAnimation *lineAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
-    lineAnimation.delegate = self;
-    UIBezierPath *path = [UIBezierPath bezierPath];
-    [path moveToPoint:startPoint];
-    [path addQuadCurveToPoint:endPoint controlPoint:CGPointMake(150, 30)];
-    lineAnimation.path = path.CGPath;
-    lineAnimation.duration = 1.0f;
-    [self.redAnimationView.layer addAnimation:lineAnimation forKey:@"runLine"];
+//    CAKeyframeAnimation *lineAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+//    lineAnimation.delegate = self;
+//    UIBezierPath *path = [UIBezierPath bezierPath];
+//    [path moveToPoint:startPoint];
+//    [path addQuadCurveToPoint:endPoint controlPoint:CGPointMake(150, 30)];
+//    lineAnimation.path = path.CGPath;
+//    lineAnimation.duration = 1.0f;
+//    [self.redAnimationView.layer addAnimation:lineAnimation forKey:@"runLine"];
     
     //缩放
-    CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-    scaleAnimation.delegate = self;
-    scaleAnimation.duration = 1.0f;
-    scaleAnimation.fromValue = [NSNumber numberWithFloat:1.0];
-    scaleAnimation.toValue = [NSNumber numberWithFloat:0.25];
-    [self.redAnimationView.layer addAnimation:scaleAnimation forKey:@"scale"];
+//    CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+//    scaleAnimation.delegate = self;
+//    scaleAnimation.duration = 1.0f;
+//    scaleAnimation.fromValue = [NSNumber numberWithFloat:1.0];
+//    scaleAnimation.toValue = [NSNumber numberWithFloat:0.25];
+//    [self.redAnimationView.layer addAnimation:scaleAnimation forKey:@"scale"];
     
     //直线,暂不考虑循环引用
     [UIView animateWithDuration:1.0 animations:^{
