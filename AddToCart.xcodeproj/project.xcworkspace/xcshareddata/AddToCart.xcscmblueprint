@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F267FAA8DD9892122ADFB1FA578E24335B721712",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F267FAA8DD9892122ADFB1FA578E24335B721712" : 0,
+    "7F9F05F3E0082C56E5D5DA9666885CD712FCF14A" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "556B3705-38A5-4EB5-9983-28DD74481E99",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F267FAA8DD9892122ADFB1FA578E24335B721712" : "AddToCart\/",
+    "7F9F05F3E0082C56E5D5DA9666885CD712FCF14A" : "AddToCart\/AddToCart\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "AddToCart",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "AddToCart.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/LittleDragonHuman\/AddToCart-Animation.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7F9F05F3E0082C56E5D5DA9666885CD712FCF14A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:LittleDragonHuman\/Animation-AddToCart.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F267FAA8DD9892122ADFB1FA578E24335B721712"
+    }
+  ]
+}

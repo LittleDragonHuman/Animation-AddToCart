@@ -68,6 +68,7 @@ static CGFloat bottomViewHeight = 60.0f;
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray *dataArray;
 @property (nonatomic, strong) BottomView *bottomView;
+@property (nonatomic, strong) UIView *redAnimationView;
 
 @end
 
@@ -78,7 +79,7 @@ static CGFloat bottomViewHeight = 60.0f;
     
     [self setUpCollectionView];
     [self setUpBottomView];
-    
+    [self setUpRedAnimationView];
     self.dataArray = [NSMutableArray arrayWithArray:[ProductData fetchAllProduct]];
     [self.collectionView reloadData];
 }
@@ -114,24 +115,53 @@ static CGFloat bottomViewHeight = 60.0f;
     CGFloat width = button.frame.size.width;
     CGFloat height = button.frame.size.height;
     
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, height)];
-    view.backgroundColor = [UIColor redColor];
-    [self.view addSubview:view];
-    [self.view bringSubviewToFront:view];
-    view.center = startPoint;
+    self.redAnimationView.frame = CGRectMake(0, 0, width, height);
+    [self.view addSubview:self.redAnimationView];
+    [self.view bringSubviewToFront:self.redAnimationView];
+    self.redAnimationView.center = startPoint;
     
     CGPoint endPoint = [self.view convertPoint:self.bottomView.numLabel.center fromView:self.bottomView];
     
+    //贝塞尔曲线
+    CAKeyframeAnimation *lineAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+    lineAnimation.delegate = self;
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    [path moveToPoint:startPoint];
+    [path addQuadCurveToPoint:endPoint controlPoint:CGPointMake(150, 30)];
+    lineAnimation.path = path.CGPath;
+    lineAnimation.duration = 1.0f;
+    [self.redAnimationView.layer addAnimation:lineAnimation forKey:@"runLine"];
+    
+    //缩放
+    CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    scaleAnimation.delegate = self;
+    scaleAnimation.duration = 1.0f;
+    scaleAnimation.fromValue = [NSNumber numberWithFloat:1.0];
+    scaleAnimation.toValue = [NSNumber numberWithFloat:0.25];
+    [self.redAnimationView.layer addAnimation:scaleAnimation forKey:@"scale"];
+    
+    //直线,暂不考虑循环引用
     [UIView animateWithDuration:1.0 animations:^{
-        view.frame = CGRectMake(0, 0, 5, 5);
-        view.layer.cornerRadius = view.frame.size.height / 2;
-        view.center = endPoint;
-        
+        self.redAnimationView.frame = CGRectMake(0, 0, 5, 5);
+        self.redAnimationView.layer.cornerRadius = self.redAnimationView.frame.size.height / 2;
+        self.redAnimationView.center = endPoint;
     }completion:^(BOOL finished) {
-        [view removeFromSuperview];
-        count ++;
-        [self updateBottomInfo];
+        [self stopWork];
     }];
+}
+
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
+{
+    if (flag) {
+        [self stopWork];
+    }
+}
+
+- (void)stopWork
+{
+    [self.redAnimationView removeFromSuperview];
+    count ++;
+    [self updateBottomInfo];
 }
 
 - (void)setUpCollectionView
@@ -153,6 +183,12 @@ static CGFloat bottomViewHeight = 60.0f;
     self.bottomView = [[BottomView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.collectionView.frame), self.view.frame.size.width, bottomViewHeight)];
     [self.view addSubview:self.bottomView];
     [self updateBottomInfo];
+}
+
+- (void)setUpRedAnimationView
+{
+    self.redAnimationView = [[UIView alloc] initWithFrame:CGRectZero];
+    self.redAnimationView.backgroundColor = [UIColor redColor];
 }
 
 - (void)updateBottomInfo
